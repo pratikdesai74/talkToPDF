@@ -12,7 +12,6 @@ from langchain.agents import AgentExecutor, create_tool_calling_agent
 
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
-os.environ["OPENAI_API_KEY"] = "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"
 embeddings = SpacyEmbeddings(model_name="en_core_web_md")
 def pdf_read(pdf_doc):
     text = ""
