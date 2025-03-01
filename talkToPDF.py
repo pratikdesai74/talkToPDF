@@ -13,6 +13,10 @@ from langchain.agents import AgentExecutor, create_tool_calling_agent
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 
+import subprocess
+import sys
+
+subprocess.check_call([sys.executable, "download_spacy_model.py"])
 embeddings = SpacyEmbeddings(model_name="en_core_web_sm")
 def pdf_read(pdf_doc):
     text = ""
