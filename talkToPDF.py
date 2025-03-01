@@ -13,7 +13,7 @@ from langchain.agents import AgentExecutor, create_tool_calling_agent
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 
-embeddings = SpacyEmbeddings(model_name="en_core_web_sm")
+embeddings = SpacyEmbeddings(model_name="en_core_web_md")
 def pdf_read(pdf_doc):
     text = ""
     for pdf in pdf_doc:
