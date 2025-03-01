@@ -1,4 +1,4 @@
-#An Intelligent Document Assistant Powered by AI
+# An Intelligent Document Assistant Powered by AI
 TalkToPDF is a sophisticated document interaction tool that transforms how you extract insights from PDF documents. Leveraging Open AI/Anthropic's Claude AI, this application allows you to have natural conversations with your PDFs, extracting precise information without the tedious process of manual searching.
 Key Features
 
