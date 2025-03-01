@@ -25,3 +25,4 @@ Knowledge Management: Build a queryable knowledge base from organizational docum
 
 TalkToPDF represents the next generation of document interaction tools, bridging the gap between static PDFs and dynamic, accessible information.
 PS: change the api key of OpenAI/ClaudAI to make it work
+Streamlit link: https://talktopdf-pofcgxwt5mlsevhylbuhj6.streamlit.app/
