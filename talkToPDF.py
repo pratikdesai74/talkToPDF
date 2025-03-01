@@ -13,18 +13,6 @@ from langchain.agents import AgentExecutor, create_tool_calling_agent
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 
-import subprocess
-import sys
-import os
-
-# Check if model is already downloaded
-try:
-    import en_core_web_md
-    print("spaCy model already available")
-except ImportError:
-    print("Downloading spaCy model...")
-    subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_md"])
-    
 embeddings = SpacyEmbeddings(model_name="en_core_web_sm")
 def pdf_read(pdf_doc):
     text = ""
