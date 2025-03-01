@@ -63,16 +63,14 @@ def get_conversational_chain(tools,ques):
 
 def user_input(user_question):
     
-    
-    
-    new_db = FAISS.load_local("faiss_db", embeddings,allow_dangerous_deserialization=True)
-    
-    retriever=new_db.as_retriever()
-    retrieval_chain= create_retriever_tool(retriever,"pdf_extractor","This tool is to give answer to queries from the pdf")
-    get_conversational_chain(retrieval_chain,user_question)
-
-
-
+    # Check if the FAISS database exists before trying to load it
+    if os.path.exists("faiss_db") and os.path.isfile("faiss_db/index.faiss"):
+        new_db = FAISS.load_local("faiss_db", embeddings, allow_dangerous_deserialization=True)
+        retriever = new_db.as_retriever()
+        retrieval_chain = create_retriever_tool(retriever, "pdf_extractor", "This tool is used to extract information from PDF documents")
+        get_conversational_chain(retrieval_chain, user_question)
+    else:
+        st.error("No PDFs have been processed yet. Please upload and process PDFs before asking questions.")
 
 
 def main():
